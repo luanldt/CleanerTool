@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -21,6 +20,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Setting">
             <items>
+                  <MenuItem fx:id="MenuItemTypeExtension" mnemonicParsing="false" onAction="#showSetting" text="Type Extension" />
               <MenuItem mnemonicParsing="false" text="Theme" />
             </items>
           </Menu>
@@ -70,7 +70,7 @@
             <Button fx:id="ButtonChooseFolder" layoutX="117.0" layoutY="90.0" mnemonicParsing="false" onAction="#chooseFolderSource" prefHeight="33.0" prefWidth="158.0" text="Choose folder Source" />
             <Label fx:id="LabelSource" layoutX="127.0" layoutY="135.0" prefHeight="30.0" prefWidth="350.0" text="Source" textFill="#128a38" />
             <Label fx:id="LabelDestination" layoutX="127.0" layoutY="177.0" prefHeight="30.0" prefWidth="350.0" text="Label" textFill="#333fe4" />
-            <Button fx:id="ButtonMove" layoutX="106.0" layoutY="242.0" mnemonicParsing="false" onAction="#doMove" prefHeight="75.0" prefWidth="392.0" text="MOVE" />
+            <Button fx:id="ButtonMove" layoutX="106.0" layoutY="242.0" mnemonicParsing="false" onAction="#doMove" prefHeight="75.0" prefWidth="392.0" style="-fx-background-color: #27ae60; -fx-text-fill: #ecf0f1; -fx-font-size: 30; -fx-font-weight: bold;" text="MOVE" />
             <Button fx:id="ButtonChooseFolderDestination" layoutX="293.0" layoutY="91.0" mnemonicParsing="false" onAction="#chooseFolderDestination" prefHeight="33.0" prefWidth="186.0" text="Choose folder Destination" />
          </children>
          <padding>

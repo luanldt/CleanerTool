@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+   <center>
+      <SplitPane dividerPositions="0.2391304347826087" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane prefHeight="398.0" prefViewportHeight="398.0" prefViewportWidth="139.0" prefWidth="139.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <TreeView fx:id="TreeViewMenu" layoutX="-46.0" layoutY="39.0" prefHeight="398.0" prefWidth="139.0" showRoot="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="AnchorPaneContent" minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="451.0">
+               <children>
+                  <Pane fx:id="PaneImage" layoutX="52.0" layoutY="33.0" prefHeight="355.0" prefWidth="451.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <CheckBox layoutX="98.0" layoutY="99.0" mnemonicParsing="false" text="*.jpg" />
+                        <CheckBox layoutX="180.0" layoutY="99.0" mnemonicParsing="false" text="*.gif" />
+                        <CheckBox layoutX="261.0" layoutY="99.0" mnemonicParsing="false" text="*.png" />
+                        <Label layoutX="98.0" layoutY="46.0" prefHeight="17.0" prefWidth="222.0" text="Check type image extension" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="PaneMusic" layoutX="62.0" layoutY="43.0" prefHeight="355.0" prefWidth="451.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <CheckBox layoutX="99.0" layoutY="99.0" mnemonicParsing="false" text="*.mp3" />
+                        <CheckBox layoutX="181.0" layoutY="99.0" mnemonicParsing="false" text="*.flac" />
+                        <CheckBox layoutX="262.0" layoutY="99.0" mnemonicParsing="false" text="*.m4a" />
+                        <Label layoutX="98.0" layoutY="47.0" prefHeight="17.0" prefWidth="222.0" text="Check type music extension" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="PaneVideo" layoutX="72.0" layoutY="53.0" prefHeight="355.0" prefWidth="451.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="99.0" layoutY="45.0" prefHeight="17.0" prefWidth="222.0" text="Check type video extension" />
+                        <CheckBox layoutX="99.0" layoutY="98.0" mnemonicParsing="false" text="*.mp4" />
+                        <CheckBox layoutX="180.0" layoutY="98.0" mnemonicParsing="false" text="*.mov" />
+                        <CheckBox layoutX="261.0" layoutY="98.0" mnemonicParsing="false" text="*.flv" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="PaneDocument" prefHeight="355.0" prefWidth="451.0" visible="false">
+                     <children>
+                        <CheckBox layoutX="98.0" layoutY="100.0" mnemonicParsing="false" text="*.txt" />
+                        <CheckBox layoutX="180.0" layoutY="100.0" mnemonicParsing="false" text="*.pdf" />
+                        <CheckBox layoutX="261.0" layoutY="100.0" mnemonicParsing="false" text="*.doc" />
+                        <CheckBox layoutX="176.0" layoutY="134.0" mnemonicParsing="false" text="*.docx" />
+                        <Label layoutX="97.0" layoutY="49.0" prefHeight="17.0" prefWidth="222.0" text="Check type document extension" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="43.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="ButtonSave" layoutX="538.0" layoutY="7.0" mnemonicParsing="false" onAction="#saveSetting" style="-fx-background-color: #2980b9;" text="Save" AnchorPane.rightAnchor="30.0" />
+            <Button fx:id="ButtonCancel" layoutX="460.0" layoutY="7.0" mnemonicParsing="false" onAction="#closeSetting" text="Cancel" AnchorPane.rightAnchor="100.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
